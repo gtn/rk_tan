@@ -142,6 +142,8 @@ class block_tan extends block_base {
 					$update->userid = $USER->id;
 					$update->timestamp = time();
 					$DB->update_record('enrol_tan', $update);
+					
+					redirect($CFG->wwwroot."/course/view.php?id=".$courseid);
 				}
 				
 			}else{
